@@ -1,0 +1,657 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  html{
+    scroll-behavior: smooth;
+  }
+  
+  body{
+      background-color: #fff;
+      font-family: sans-serif;
+      width: 100%;
+      
+  }
+  .container{
+    
+  }
+  .header{
+    
+  }
+  .header h2{
+    margin-bottom: 20px;
+  }
+  nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    background-color: #fff;
+    height: 50px;
+    box-shadow: 0 10px 50px  rgb(241, 237, 237);
+    position: sticky;
+    top: 0;
+    left: 0;
+  }
+  .logo{
+    width: 45px;
+    margin-left: 80px;
+  }
+  nav ul li{
+    display: inline-block;
+    list-style: none;
+    margin: 10px 20px;
+  }
+  nav ul li:last-child{
+    margin-right: 120px;
+  }
+  nav ul li a{
+    color: black;
+    text-decoration: none;
+    font-size: 18px;
+    position: relative;
+  }
+  nav ul li a:hover{
+    color: #ff1010;
+  }
+  nav ul li a::after{
+    content: '';
+    width: 0;
+    height: 3px;
+    background: #ff004f;
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    transition: 0.5s;
+  }
+  nav ul li a:hover::after{
+    width: 100%;
+  }
+  .header-text{
+    margin-top: 180px;
+    font-size: 30px;
+    color: black;
+    margin-left: 80px;
+  }
+  .header-text span{
+    color: #ff1010;
+  }
+  .header-grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  .header-image{
+    margin-top: 50px;
+    border-radius: 50%;
+    height: 75vh;
+    width: 80%;
+    margin-right: 80px;
+
+  }
+  .header-button{
+    width: 100px;
+    height: 30px;
+    border-radius: 30px;
+    cursor: pointer;
+    border: none;
+    background-color: #1c055c;
+    color: #fff;
+  }
+  .fade-in{
+    opacity: 0;
+    transition: opacity 250ms ease-in;
+  }
+  .fade-in.appear{
+    opacity: 1;
+  }
+/*-----products-----*/
+  
+  
+
+  .products{
+    color: black;
+    position: relative;
+    justify-content: space-around;
+    font-size: 30px;
+    width: 100%;
+  }
+  .collections{
+    text-align: center;
+    margin-top: 40px;
+  }
+  .titles{
+    display: inline-flex;
+    margin-left: 80px;
+  }
+  .title-links{
+    margin-right: 50px;
+    font-size: 22px;
+    text-align: center;
+    cursor: pointer;
+    position: relative;
+  }
+  .title-links::after{
+    content: '';
+    width: 0;
+    height: 3px;
+    background: #ff004f;
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    transition: 0.5s;
+    display: inline-block;
+  }
+  .title-links.active-link::after{
+    width: 100%;
+  }
+  .tab-content ul li{
+    list-style: none;
+   
+  }
+  .tab-content ul{
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    justify-content: space-around;
+    row-gap: 30px;
+    column-gap: 0px;
+    margin-left: 50px;
+    margin-right: 60px;
+  }
+  .tab-content{
+    display: none;
+    
+  }
+  .tab-content.active-tab{
+    display: block;
+  }
+  .box{
+    margin: auto;
+    font-size: 15px;
+    border: none;
+    border-radius: 25px;
+    width: 210px;
+    box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.02);
+  }
+  .box:hover{
+    transform: scale(1.03);
+    transition: 1s;
+    z-index: 2px;
+   
+    
+  }
+  .tab-content img{
+    width: 200px;
+    margin-top: 25px;
+  }
+  .tab-content p div{
+    margin-left: 10px;
+  }
+  .fa-star{
+    color: orange;
+    width: 12px;
+  }
+  .box-text{
+    margin-left: 24px;
+    margin-bottom: 20px;
+  }
+  .price-cart{
+    display: flex;
+    justify-content: space-between;
+    margin-right: 40px;
+    margin-top: 10px;
+  }
+  .price-cart a{
+    text-decoration: none;
+    color: #fff;
+    width: 110px;
+    text-align: center;
+    height: 3.5vh;
+  }
+  .cart{
+    border: 1px solid orange;
+    background-color: orange;
+    border-radius: 20px;
+  }
+  .fa-cart-shopping{
+ 
+    color: #fff;
+    border-radius: 20px;
+    margin-top: -10px;
+  }
+
+  /*----------Banner--------*/
+  .Banner{
+    margin-top: 50px;
+    margin-bottom: 50px;
+    background-image: url('https://media.istockphoto.com/photos/fire-sparks-background-picture-id1151621528?k=20&m=1151621528&s=612x612&w=0&h=FSmhvN7XD6EbkZiG7bGXAcpBUHOXy7QI_kWuJtSk_sM=');
+    height: 40vh;
+    color: #fff;
+    background-repeat: no-repeat;
+    text-align: center;
+    background-size: cover;
+    font-size: 23px;
+    width: 100%;
+  }
+  .banner-content{
+    padding-top: 60px;
+  }
+
+  /*--------special offer--------*/
+
+  .special-offer{
+    margin-bottom: 30px;
+    font-size: 35px;
+    text-align: center;
+  }
+  .tab-content.special{
+    display: block;
+  }
+  /*--------blog--------  */
+  .blog-grid{
+    display: grid;
+    grid-template-columns: 33.3% 33.3% 33.3%;
+    column-gap: 10px;
+    margin-left: 50px;
+    margin-right: 50px;
+  }
+  .blog{
+    margin-top: 60px;
+    
+  }
+  .blog h1{
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 35px;
+  }
+
+  .blog-grid .blog-img{
+    position: relative;
+    margin: auto;
+    width: 100%;
+  }
+  .blog-grid .blog-text{
+    line-height: 2;
+  }
+  .blog-grid h3{
+    margin-top: 15px;
+    line-height: 1.4;
+    margin-bottom: 10px;
+  }
+  .date-grid{
+    display: flex;
+    justify-content: space-between;
+    margin-right: 20px;
+    margin-bottom: 20px;
+  }
+  .read-more{
+    height: 5vh;
+    border-radius: 20px;
+    border: 1px solid #616161;
+    font-size: 16px;
+    width: 120px;
+    background-color: #fff;
+  }
+  .read-more:hover{
+    cursor: pointer;
+    background-color: #616161;
+    color: #fff;
+
+  }
+  /*--------About--------*/
+  .about-grid{
+    margin-top: 50px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 10px;
+    margin-left: 80px;
+  }
+  .about-grid .about-img{
+    width: 100%;
+    height: 60vh;
+  }
+  .about-grid h1{
+    margin-bottom: 20px;
+    font-size: 35px;
+  }
+  .about-grid p{
+    line-height: 2;
+  }
+  .about-text{
+    margin-right: 50px;
+  }
+   /*--------newsletter--------*/
+   .newsletter{
+    margin-top: 70px;
+    margin-bottom: 70px;
+   }
+   .newsletter h1, .newsletter div, .newsletter p{
+     text-align: center;
+     margin-top: 30px;
+   }
+   .newsletter h1{
+    font-size: 35px;
+   }
+   .newsletter p{
+    margin: 10px 30%;
+    line-height: 1.5;
+   }
+   .btn-subscribe{
+    height: 7vh;
+    border-radius: 20px;
+    border: 1px solid #616161;
+    font-size: 16px;
+    width: 180px;
+    background-color: #616161;
+    color: #fff;
+   }
+   .btn-subscribe:hover{
+    cursor: pointer;
+
+    background-color: #333131;
+
+   }
+   .email{
+    width: 300px;
+    height: 7vh;
+    border-radius: 20px;
+    border: 1px solid #616161;
+    font-size: 16px;
+   }
+    /*--------footer--------*/
+    footer{
+        color: white;
+        background-color: rgb(20, 16, 16);
+        border-top-left-radius: 100px;
+    }
+    .footer{
+        display: grid;
+        grid-template-columns: 30% 25% 25% 20%;
+        column-gap: 40px;
+    }
+    .footer-logo img{
+        width: 50px;
+        margin-top: -8px;
+        margin-right: 5px;
+    }
+    .footer-logo{
+        margin-top: 40px;
+        margin-left: 120px;
+    }
+    .footer-logo div{
+        display: flex;
+        margin-bottom: 20px;
+    }
+    .footer-media{
+        margin-left: -200px;
+    }
+    .footer-media ul{
+        display: flex;
+        margin-top: 45px;
+        
+    }
+    .footer-media ul li{
+        list-style: none;
+        margin-left: 15px;
+       
+    }
+    .footer-link p a{
+        text-decoration: none;
+    }
+    .footer-contact{
+        margin-top: 40px;
+    }
+    .footer-contact span{
+        margin-left: 10px;
+    }
+    .footer-contact p{
+        margin-top: 15px;
+    }
+    .footer-contact h2, .footer-link h2{
+        margin-bottom: 40px;
+    }
+    .footer-link{
+        margin-top: 40px;
+        
+    }
+    .footer-link p{
+        margin-top: 15px;
+    }
+    .footer p{
+        line-height: 2;
+    }
+    .copyright{
+        margin-top: 20px;
+        text-align: center;
+    }
+    
+@media (min-width: 500px) and (max-width: 800px){
+    /* -----product----- */
+    .tab-content ul{
+        display: grid;
+        grid-template-columns: 50% 50%;
+        justify-content: space-around;
+        row-gap: 30px;
+        column-gap: 0px;
+        margin-left: 50px;
+        margin-right: 60px;
+      }
+    /*--------blog--------  */
+  .blog-grid{
+    display: block;
+    margin-left: 50px;
+    margin-right: 50px;
+  }
+  .blog-div{
+    margin-bottom: 30px;
+  }
+    /*--------About--------*/
+  .about-grid{
+    margin-top: 50px;
+    display: block
+  }
+  .about-grid .about-img{
+    width: 100%;
+    position: relative;
+    margin: auto;
+    display: block;
+    height: 60vh;
+  }
+  .about-grid h1{
+    margin-bottom: 20px;
+    margin-top: 20px;
+    font-size: 35px;
+  }
+  .about-grid p{
+    line-height: 2;
+  }
+  /* ------newsletter----- */
+  .newsletter p{
+    margin: 10px 10%;
+    line-height: 1.5;
+   }
+/* -----footer------- */
+  footer{
+    color: white;
+    background-color: rgb(20, 16, 16);
+    border-top-left-radius: 100px;
+}
+.footer{
+    display: block;
+    
+}
+.mapia{
+    margin-top: 60px;
+}
+.footer-logo img{
+    width: 50px;
+    margin-top: 50px;
+    margin-right: 5px;
+}
+.footer-logo{
+    margin-top: 40px;
+    margin-left: 50px;
+}
+.footer-logo div{
+    display: flex;
+    margin-bottom: 20px;
+}
+.footer-media{
+    margin-left: -200px;
+}
+.footer-media ul{
+    display: flex;
+    margin-top: 45px;
+    
+}
+.footer-media ul li{
+    list-style: none;
+    margin-left: 15px;
+   
+}
+.footer-link p a{
+    text-decoration: none;
+}
+.footer-contact{
+    margin-top: 40px;
+}
+.footer-contact span{
+    margin-left: 10px;
+}
+.footer-contact p{
+    margin-top: 15px;
+    margin-left: 50px;
+}
+.footer-contact h2{
+    margin-bottom: 40px;
+    margin-left: 50px;
+}
+.footer-link{
+    margin-top: 40px;
+    margin-left: 50px;
+    
+}
+.footer-link p{
+    margin-top: 15px;
+}
+.footer p{
+    line-height: 2;
+}
+.copyright{
+    margin-top: 20px;
+    text-align: center;
+}
+}
+@media (min-width: 375px) and (max-width: 499px){
+    /* -----product----- */
+    .tab-content ul{
+        display: block;
+        position: relative;
+        margin: auto;
+      }
+      /*--------blog--------  */
+  .blog-grid{
+    display: block;
+    margin-left: 50px;
+    margin-right: 50px;
+  }
+  .blog-div{
+    margin-bottom: 30px;
+  }
+    /*--------About--------*/
+  .about-grid{
+    margin-top: 50px;
+    display: block
+  }
+  .about-grid .about-img{
+    width: 100%;
+    position: relative;
+    margin: auto;
+    display: block;
+    height: 60vh;
+  }
+  .about-grid h1{
+    margin-bottom: 20px;
+    margin-top: 20px;
+    font-size: 35px;
+  }
+  .about-grid p{
+    line-height: 2;
+  }
+  /* ------newsletter----- */
+  .newsletter p{
+    margin: 10px 10%;
+    line-height: 1.5;
+   }
+/* -----footer------- */
+  footer{
+    color: white;
+    background-color: rgb(20, 16, 16);
+    border-top-left-radius: 100px;
+}
+.footer{
+    display: block;
+    
+}
+.mapia{
+    margin-top: 60px;
+}
+.footer-logo img{
+    width: 50px;
+    margin-top: 50px;
+    margin-right: 5px;
+}
+.footer-logo{
+    margin-top: 40px;
+    margin-left: 50px;
+}
+.footer-logo div{
+    display: flex;
+    margin-bottom: 20px;
+}
+.footer-media{
+    margin-left: -200px;
+}
+.footer-media ul{
+    display: flex;
+    margin-top: 45px;
+    
+}
+.footer-media ul li{
+    list-style: none;
+    margin-left: 15px;
+   
+}
+.footer-link p a{
+    text-decoration: none;
+}
+.footer-contact{
+    margin-top: 40px;
+}
+.footer-contact span{
+    margin-left: 10px;
+}
+.footer-contact p{
+    margin-top: 15px;
+    margin-left: 50px;
+}
+.footer-contact h2{
+    margin-bottom: 40px;
+    margin-left: 50px;
+}
+.footer-link{
+    margin-top: 40px;
+    margin-left: 50px;
+    
+}
+.footer-link p{
+    margin-top: 15px;
+}
+.footer p{
+    line-height: 2;
+}
+.copyright{
+    margin-top: 20px;
+    text-align: center;
+}
+}
